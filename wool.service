@@ -1,0 +1,12 @@
+[Unit]
+Description=Wool
+After=network.target
+
+[Service]
+NoNewPrivileges=true
+ExecStart=/root/bee/wool -d 2
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
